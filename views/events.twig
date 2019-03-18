@@ -1,0 +1,12 @@
+<p><b>Nos evenements sont:</b></p>
+<ul>
+    {% for event in events %}
+    <li>
+        {{ event }}<a href="/events/delete/{{ event }}">delete</a>
+    </li>
+    {%endfor%}
+</ul>
+<form method="post" action="/events/">
+    You want to add an event: <input type="text" name="newOne">
+    <button type="submit"> Ok </button>
+</form>
